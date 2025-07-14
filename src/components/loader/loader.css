@@ -1,0 +1,40 @@
+.demo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.globe-loader {
+  position: relative;
+  font-size: 80px;
+  color: #4d90fe;
+  animation: spin 3s linear infinite;
+}
+
+.globe-loader i {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: 24px;
+  color: #ff6f61;
+  animation: orbit 3s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg) translateX(50px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(50px) rotate(-360deg);
+  }
+}

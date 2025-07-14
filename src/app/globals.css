@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  animation: fade-in 500ms;
+}
+
+.section-padding-x {
+  @apply px-4 s:px-5 xs:px-6 sm:px-7 md:px-9 lg:px-11 l:px-[108px] xl:px-[132px] 2xl:px-[144px] 3xl:px-[204px];
+}
