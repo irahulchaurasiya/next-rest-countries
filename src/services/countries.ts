@@ -1,4 +1,5 @@
 import axios from "axios";
+import CountryField from '../utils/index.ts';
 
 interface GetCountriesParams {
   fields?: CountryField[];
