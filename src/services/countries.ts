@@ -1,5 +1,30 @@
 import axios from "axios";
-import CountryField from '../utils/index.ts';
+
+type CountryField =
+  | "name"
+  | "capital"
+  | "population"
+  | "region"
+  | "flags"
+  | "cca2"
+  | "subregion";
+
+  
+type Country = {
+  name?: {
+    common: string;
+    official: string;
+  };
+  population?: number;
+  region?: string;
+  capital?: string[];
+  flags?: {
+    png: string;
+    svg: string;
+  };
+  cca2?: string;
+  subregion?: string;
+};
 
 interface GetCountriesParams {
   fields?: CountryField[];
