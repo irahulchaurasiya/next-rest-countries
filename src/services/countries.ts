@@ -33,7 +33,7 @@ interface GetCountriesParams {
 export const getCountries = async (
   params: GetCountriesParams
 ): Promise<Country[]> => {
-  const apiUrl = process.env.NEXT_PUBLIC_COUNTRIES_API;
+  const apiUrl = "https://restcountries.com/v3.1/all";
 
   if (!apiUrl) {
     throw new Error("Api is not defined");
@@ -52,7 +52,7 @@ export const getCountries = async (
 };
 
 export const getSingleCountry = async (countryCode: string) => {
-  const apiUrl = process.env.NEXT_PUBLIC_SINGLE_COUNTRY_API;
+  const apiUrl = "https://restcountries.com/v3.1/alpha/{code}";
 
   if (!apiUrl) {
     throw new Error("Api is not defined");
